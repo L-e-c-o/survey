@@ -24,7 +24,7 @@ const (
 	SpecialKeyDelete   = '\x12'
 	IgnoreKey          = '\000'
 	KeyTab             = '\t'
-	KeySave            = '\x02'
+	KeySave            = '\x13'
 )
 
 func soundBell(out io.Writer) error {
