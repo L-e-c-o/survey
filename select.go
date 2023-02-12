@@ -298,7 +298,7 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 			break
 		}
 		if r == terminal.KeySave {
-			return "", terminal.KeySave	
+			return "", terminal.KeySaveErr	
 		}
 		if s.OnChange(r, config) {
 			break
