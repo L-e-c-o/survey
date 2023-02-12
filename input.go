@@ -3,8 +3,8 @@ package survey
 import (
 	"errors"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
+	"github.com/L-e-c-o/survey/v2/core"
+	"github.com/L-e-c-o/survey/v2/terminal"
 )
 
 /*
