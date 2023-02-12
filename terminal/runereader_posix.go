@@ -80,6 +80,11 @@ func (rr *RuneReader) ReadRune() (rune, int, error) {
 		return r, size, err
 	}
 
+	if r == 27 {
+		fmt.Println("YESSSSSSS")
+		return KeySave, size, err
+	}
+
 	if r != KeyEscape {
 		return r, size, err
 	}
