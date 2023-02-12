@@ -94,6 +94,10 @@ func (rr *RuneReader) ReadRune() (rune, int, error) {
 		return r, size, err
 	}
 
+	if r == 10 {
+		fmt.Println("yeeeessssss !!!!")
+		return KeySave, size, nil
+	}
 	// ESC O ... or ESC [ ...?
 	if r != normalKeypad && r != applicationKeypad {
 		fmt.Println(r)
