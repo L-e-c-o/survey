@@ -75,6 +75,7 @@ func (rr *RuneReader) RestoreTermMode() error {
 // See https://vt100.net/docs/vt102-ug/appendixc.html
 func (rr *RuneReader) ReadRune() (rune, int, error) {
 	r, size, err := rr.state.reader.ReadRune()
+	fmt.Println(r)
 	if err != nil {
 		return r, size, err
 	}
