@@ -95,7 +95,6 @@ func (rr *RuneReader) ReadRune() (rune, int, error) {
 	}
 
 	if r == 10 {
-		fmt.Println("yeeeessssss !!!!")
 		return KeySave, size, nil
 	}
 	// ESC O ... or ESC [ ...?

@@ -288,8 +288,6 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 	// start waiting for input
 	for {
 		r, _, err := rr.ReadRune()
-		fmt.Println("DEBUG !!!")
-		fmt.Println(r)
 		if err != nil {
 			return "", err
 		}
