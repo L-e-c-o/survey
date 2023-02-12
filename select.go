@@ -288,17 +288,19 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 	// start waiting for input
 	for {
 		r, _, err := rr.ReadRune()
+		fmt.Println("DEBUG !!!")
+		fmt.Println(r)
 		if err != nil {
 			return "", err
+		}
+		if r == terminal.KeySave {
+			return "", terminal.KeySaveErr
 		}
 		if r == terminal.KeyInterrupt {
 			return "", terminal.InterruptErr
 		}
 		if r == terminal.KeyEndTransmission {
 			break
-		}
-		if r == terminal.KeySave {
-			return "", terminal.KeySaveErr	
 		}
 		if s.OnChange(r, config) {
 			break
