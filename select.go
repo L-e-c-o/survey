@@ -308,6 +308,8 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 		if r == terminal.KeyEndTransmission {
 			break
 		}
+		fmt.Println("BEFOR ONCHANGE !!!!!!")
+		time.Sleep(1 * time.Second)
 		if s.OnChange(r, config) {
 			break
 		}
