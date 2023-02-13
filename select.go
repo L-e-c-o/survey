@@ -297,7 +297,7 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 		if err != nil {
 			return "", err
 		}
-		if r == 19 {
+		if r == '\x13' {
 			return "", terminal.KeySaveErr
 		}
 		if r == terminal.KeyInterrupt {
