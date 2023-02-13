@@ -3,6 +3,7 @@ package survey
 import (
 	"errors"
 	"fmt"
+	"time"
 
 	"github.com/L-e-c-o/survey/v2/core"
 	"github.com/L-e-c-o/survey/v2/terminal"
@@ -292,6 +293,7 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 
 		fmt.Println("DEBUG !!!!!!!!!!!!!!!!!!!!!")
 		fmt.Println(r)
+		time.Sleep(5 * time.Second)
 		if err != nil {
 			return "", err
 		}
