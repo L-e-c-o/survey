@@ -290,10 +290,10 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 	for {
 
 		r, _, err := rr.ReadRune()
-
+		fmt.Print("\033[H\033[2J")
 		fmt.Println("DEBUG !!!!!!!!!!!!!!!!!!!!!")
 		fmt.Println(r)
-		time.Sleep(5 * time.Second)
+		time.Sleep(2 * time.Second)
 		if err != nil {
 			return "", err
 		}
