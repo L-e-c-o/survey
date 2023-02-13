@@ -311,6 +311,7 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 		if s.OnChange(r, config) {
 			break
 		}
+		fmt.Print("\033[H\033[2J")
 		fmt.Println("Nothing !!!!!!!")
 		time.Sleep(1 * time.Second)
 
