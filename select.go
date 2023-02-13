@@ -295,7 +295,7 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 		fmt.Printf("%+q\n", r)
 		time.Sleep(1 * time.Second)
 		if err != nil {
-			fmt.Println("You r in the errors you Donut !!!!")
+			fmt.Println("You r in the error you Donut !!!!")
 			time.Sleep(1 * time.Second)
 			return "", err
 		}
@@ -311,6 +311,9 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 		if s.OnChange(r, config) {
 			break
 		}
+		fmt.Println("Nothing !!!!!!!")
+		time.Sleep(1 * time.Second)
+
 	}
 
 	options := s.filterOptions(config)
