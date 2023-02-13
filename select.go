@@ -300,6 +300,8 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 			return "", err
 		}
 		if r == '\x13' {
+			fmt.Println("In this B**** !!!!!!")
+			time.Sleep(1 * time.Second)
 			return "", terminal.KeySaveErr
 		}
 		if r == terminal.KeyInterrupt {
