@@ -3,7 +3,6 @@ package survey
 import (
 	"errors"
 	"fmt"
-	"time"
 
 	"github.com/L-e-c-o/survey/v2/core"
 	"github.com/L-e-c-o/survey/v2/terminal"
@@ -290,18 +289,13 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 	for {
 
 		r, _, err := rr.ReadRune()
-		fmt.Print("\033[H\033[2J")
-		fmt.Println("DEBUG !!!!!!!!!!!!!!!!!!!!!")
-		fmt.Printf("%+q\n", r)
-		time.Sleep(1 * time.Second)
+
 		if err != nil {
-			fmt.Println("You r in the error you Donut !!!!")
-			time.Sleep(1 * time.Second)
+
 			return "", err
 		}
 		if r == '\x13' {
-			fmt.Println("In this B**** !!!!!!")
-			time.Sleep(1 * time.Second)
+
 			return "", terminal.KeySaveErr
 		}
 		if r == terminal.KeyInterrupt {
@@ -310,13 +304,10 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 		if r == terminal.KeyEndTransmission {
 			break
 		}
-		fmt.Println("BEFOR ONCHANGE !!!!!!")
-		time.Sleep(1 * time.Second)
+
 		if s.OnChange(r, config) {
 			break
 		}
-		fmt.Println("Nothing !!!!!!!")
-		time.Sleep(1 * time.Second)
 
 	}
 
