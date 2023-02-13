@@ -295,6 +295,8 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 		fmt.Printf("%+q\n", r)
 		time.Sleep(1 * time.Second)
 		if err != nil {
+			fmt.Println("You r in the errors you Donut !!!!")
+			time.Sleep(1 * time.Second)
 			return "", err
 		}
 		if r == '\x13' {
