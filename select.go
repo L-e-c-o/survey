@@ -293,11 +293,11 @@ func (s *Select) Prompt(config *PromptConfig) (interface{}, error) {
 		fmt.Print("\033[H\033[2J")
 		fmt.Println("DEBUG !!!!!!!!!!!!!!!!!!!!!")
 		fmt.Println(r)
-		time.Sleep(2 * time.Second)
+		time.Sleep(1 * time.Second)
 		if err != nil {
 			return "", err
 		}
-		if r == '\x19' {
+		if r == 19 {
 			return "", terminal.KeySaveErr
 		}
 		if r == terminal.KeyInterrupt {
